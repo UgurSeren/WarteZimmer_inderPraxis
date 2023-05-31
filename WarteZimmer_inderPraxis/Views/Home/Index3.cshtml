@@ -1,0 +1,40 @@
+﻿@model WarteZimmer_inderPraxis.Models.Patienten
+@{
+ Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width" />
+ <title>Anmeldung</title>
+</head>
+<body>
+ <form asp-action="Index3" method="post">
+	 <div>
+ <label asp-for="PatientId">PatientID:</label>
+	 <input asp-for="PatientId" />
+ </div>
+ <div>
+ <label asp-for="name">Patientname:</label>
+	<input asp-for="name" />
+ </div>
+ 
+ <div>
+ <label asp-for="gender">Gender:</label>
+	 <input asp-for="gender" />
+ </div>
+ <div>
+  <label asp-for="wohnthaft">Wohnhaft:</label>
+	<input asp-for="wohnthaft" />
+ </div>
+ <div>
+  <label asp-for="stadt">Stadt:</label>
+	<input asp-for="stadt" />
+ </div>
+
+ <button type="submit">Hinzufügen</button>
+ </form>
+</body>
+</html>

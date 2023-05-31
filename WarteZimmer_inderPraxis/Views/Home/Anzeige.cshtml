@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Patienten>
+@{
+	Layout = null;
+}
+<h2> Die Liste von Patienten</h2>
+<div>
+	<ul>
+		@foreach (Patienten item in Model)
+		{
+			<li>@item.name</li>
+		}
+	</ul>
+</div>
+
+<a asp-action="Index"> Hauptmenü </a><br />
