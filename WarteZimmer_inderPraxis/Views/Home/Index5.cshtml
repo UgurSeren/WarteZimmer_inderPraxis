@@ -1,3 +1,35 @@
 ﻿@{
 	Layout = null;
 }
+@model IEnumerable<Patienten>
+<div>Anzahl der Patienten: @Info.x.Count()</div>
+@{
+	foreach (Patienten r in Info.x)
+	{
+		
+		
+			<div class="">
+				@if (r.gender=="male"||r.gender=="Male")
+				{
+					
+				<img class= src="~/css/adam.png" width="180" height="180"  />
+
+				}
+				else
+				{
+					
+				<img class= src="~/css/kadin.jpg" width="180" height="180" />
+				}
+				
+				
+
+			</div>
+		
+	}
+	<div class="">
+
+		<img class= src="~/css/zuruck.png" width="20" height="20" />
+		<a asp-action="Index"> Hauptmenü </a>
+
+	</div>
+}

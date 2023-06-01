@@ -5,19 +5,23 @@
         public static Queue<Patienten>? queue = new Queue<Patienten>();
         public static Patienten? p { set; get; }
 
-        public static IEnumerable<Patienten> x => queue;
+        public static IEnumerable<Patienten>? x => queue;
+        public static List<Patienten> neulist = new List<Patienten>();
 
         public static void AddPatient(Patienten p)
         {
             queue.Enqueue(p);
+            
         }
         public static void Löschen()
         {
             p = queue.Dequeue();
-            Console.WriteLine(p.name);
-              
-            
-            
+            neulist.Add(p);
+            Console.WriteLine( p.name);
+
+
+
+
         }
         
     }

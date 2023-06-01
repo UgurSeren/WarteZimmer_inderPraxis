@@ -1,5 +1,4 @@
-﻿@model IEnumerable<Patienten>
-@{
+﻿@{
     Layout = null;
 }
 
@@ -18,28 +17,26 @@
     <div>.................................</div>
 
     <style>
-        table {
-            border-collapse: separate;
-            border-spacing: 20px; /* Hier kannst du den gewünschten Abstand einstellen */
-        }
+    table {
+        border-collapse: separate;
+        border-spacing: 20px; /* Hier kannst du den gewünschten Abstand einstellen */
+    }
 
         td {
             padding: 20px; /* Hier kannst du den gewünschten Abstand einstellen */
         }
     </style>
     <table class="table">
-        <tr>
+        <tr >
             <th>ID</th>
             <th>Name</th>
             <th>Gender</th>
             <th>Adresse</th>
             <th>Stadt</th>
-            <th></th>
-
         </tr>
-
-        @foreach (var r in Model)
-        {
+        
+            @foreach (var r in Info.neulist)
+            {
             <tr>
                 <td>@r.PatientId</td>
                 <td>@r.name</td>
@@ -48,15 +45,29 @@
                 <td>@r.stadt</td>
 
             </tr>
-        }
-
-
-
+            }
+            
+        
+        
     </table>
-
+    
     <div>.................................</div>
 
+    <div class="">
 
-<a asp-action="Index"> Hauptmenü </a><br />
+        <img class= src="~/css/zuruck.png" width="20" height="20" />
+        <a asp-action="Index"> Hauptmenü </a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

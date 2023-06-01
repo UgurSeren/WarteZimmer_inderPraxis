@@ -31,7 +31,7 @@ namespace WarteZimmer_inderPraxis.Controllers
         public IActionResult Index3(Patienten p)
         {
             Info.AddPatient(p);   
-            return View("Anzeige",Info.x);
+            return View("Index4",Info.x);
         }
         public IActionResult Index1()
         {
@@ -42,9 +42,22 @@ namespace WarteZimmer_inderPraxis.Controllers
         {
             return View();
         }
-        public IActionResult Index5()
+		public IActionResult Index6()
+		{
+			return View();
+		}
+        
+
+		public IActionResult Index5()
         {
-            return View();
+            
+			
+			return View(Info.queue);
+        }
+        public IActionResult Index7(Patienten p)
+        {
+            
+            return View("Index7",p);
         }
         public IActionResult Anzeige()
         {

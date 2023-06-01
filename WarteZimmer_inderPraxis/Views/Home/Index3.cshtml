@@ -8,33 +8,46 @@
 <html>
 <head>
  <meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
  <title>Anmeldung</title>
 </head>
 <body>
- <form asp-action="Index3" method="post">
-	 <div>
- <label asp-for="PatientId">PatientID:</label>
-	 <input asp-for="PatientId" />
- </div>
- <div>
- <label asp-for="name">Patientname:</label>
-	<input asp-for="name" />
- </div>
- 
- <div>
- <label asp-for="gender">Gender:</label>
-	 <input asp-for="gender" />
- </div>
- <div>
-  <label asp-for="wohnthaft">Wohnhaft:</label>
-	<input asp-for="wohnthaft" />
- </div>
- <div>
-  <label asp-for="stadt">Stadt:</label>
-	<input asp-for="stadt" />
- </div>
 
- <button type="submit">Hinzufügen</button>
- </form>
+	<h5 class="bg-primary text-white text-center m-2 p-2">Die Anmeldung von Patienten</h5>
+ <form asp-action="Index3" method="post">
+		<div asp-validation-summary="All"></div>
+		<div class="form-group">
+			<label asp-for="PatientId" class="form-label">PatientID:</label>
+			<input asp-for="PatientId" class="form-control" />
+		</div>
+
+		<div class="form-group">
+		<label asp-for="name" class="form-label">Patientname:</label>
+		<input asp-for="name" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="gender" class="form-label">Gender:</label>
+			<input asp-for="gender" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="wohnthaft" class="form-label">Wohnhaft:</label>
+			<input asp-for="wohnthaft" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="stadt" class="form-label">Stadt:</label>
+			<input asp-for="stadt" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="beschwerde" class="form-label">Beschwerde:</label>
+			<input asp-for="beschwerde" class="form-control" />
+		</div>
+		<button type="submit">Hinzufügen</button>
+	</form>
 </body>
 </html>
+		
+
+ 
+
+
+ 
